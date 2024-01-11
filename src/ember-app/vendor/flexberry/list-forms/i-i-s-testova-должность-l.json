@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-testova-должность-e",
+  "editForm": "i-i-s-testova-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISTestovaДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-testova-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

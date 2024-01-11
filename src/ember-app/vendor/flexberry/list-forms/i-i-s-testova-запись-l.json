@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-testova-запись-e",
+  "editForm": "i-i-s-testova-запись-e",
+  "external": false,
+  "caption": "Запись",
+  "name": "IISTestovaЗаписьL",
+  "className": "ЗаписьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-testova-запись",
+      "modelProjection": "ЗаписьL"
+    }
+  ]
+}

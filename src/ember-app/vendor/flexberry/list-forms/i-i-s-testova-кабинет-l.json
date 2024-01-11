@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-testova-кабинет-e",
+  "editForm": "i-i-s-testova-кабинет-e",
+  "external": false,
+  "caption": "Кабинет",
+  "name": "IISTestovaКабинетL",
+  "className": "КабинетL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-testova-кабинет",
+      "modelProjection": "КабинетL"
+    }
+  ]
+}

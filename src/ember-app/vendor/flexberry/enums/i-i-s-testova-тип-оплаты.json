@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Testova",
+  "className": "ТипОплаты",
+  "enumObjects": {
+    "Наличные": "",
+    "Картой": ""
+  }
+}
