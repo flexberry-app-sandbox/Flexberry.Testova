@@ -22,37 +22,36 @@ export default Controller.extend({
             link: 'i-i-s-testova-клиент-l',
             caption: i18n.t('forms.application.sitemap.testova.i-i-s-testova-клиент-l.caption'),
             title: i18n.t('forms.application.sitemap.testova.i-i-s-testova-клиент-l.title'),
-            icon: 'table',
+            icon: 'calendar',
             children: null
           }, {
             link: 'i-i-s-testova-услуга-l',
             caption: i18n.t('forms.application.sitemap.testova.i-i-s-testova-услуга-l.caption'),
             title: i18n.t('forms.application.sitemap.testova.i-i-s-testova-услуга-l.title'),
-            icon: 'suitcase',
+            icon: 'file',
             children: null
           }, {
             link: 'i-i-s-testova-сотрудник-l',
             caption: i18n.t('forms.application.sitemap.testova.i-i-s-testova-сотрудник-l.caption'),
             title: i18n.t('forms.application.sitemap.testova.i-i-s-testova-сотрудник-l.title'),
-            icon: 'suitcase',
+            icon: 'edit',
             children: null
           }, {
             link: 'i-i-s-testova-запись-l',
             caption: i18n.t('forms.application.sitemap.testova.i-i-s-testova-запись-l.caption'),
             title: i18n.t('forms.application.sitemap.testova.i-i-s-testova-запись-l.title'),
-            icon: 'folder',
             children: null
           }, {
             link: 'i-i-s-testova-кабинет-l',
             caption: i18n.t('forms.application.sitemap.testova.i-i-s-testova-кабинет-l.caption'),
             title: i18n.t('forms.application.sitemap.testova.i-i-s-testova-кабинет-l.title'),
-            icon: 'paperclip',
+            icon: 'book',
             children: null
           }, {
             link: 'i-i-s-testova-должность-l',
             caption: i18n.t('forms.application.sitemap.testova.i-i-s-testova-должность-l.caption'),
             title: i18n.t('forms.application.sitemap.testova.i-i-s-testova-должность-l.title'),
-            icon: 'list',
+            icon: 'chart line',
             children: null
           }]
         }

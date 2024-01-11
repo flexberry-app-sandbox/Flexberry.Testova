@@ -7,6 +7,7 @@ import Testova.utils.UUIDConverter;
 import javax.persistence.*;
 import java.util.UUID;
 
+import java.util.List;
 
 /**
  * Entity implementation class for Entity: Услуга
@@ -29,6 +30,9 @@ public class Usluga {
 
     @Column(name = "Цена")
     private Double цена;
+
+    @OneToMany(mappedBy = "usluga", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    private List<SostavUslugi> sostavuslugis;
 
 
     public Usluga() {

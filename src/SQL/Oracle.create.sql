@@ -2,6 +2,23 @@
 
 
 
+CREATE TABLE "СоставУслуги"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Количество" NUMBER(10) NULL,
+
+	"Единицы" NVARCHAR2(255) NULL,
+
+	"Материал" RAW(16) NOT NULL,
+
+	"Услуга" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
 CREATE TABLE "Клиент"
 (
 
@@ -115,6 +132,34 @@ CREATE TABLE "Документы"
 	"Полис" NUMBER(10) NULL,
 
 	"Клиент" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "Материал"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"КодМатериала" NUMBER(10) NULL,
+
+	"Наименование" NVARCHAR2(255) NULL,
+
+	"Производитель" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "Производитель"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Код" NUMBER(10) NULL,
+
+	"Наименование" NVARCHAR2(255) NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -342,6 +387,16 @@ CREATE TABLE "ApplicationLog"
 
 
 
+ALTER TABLE "СоставУслуги"
+	ADD CONSTRAINT "СоставУслуги__9465" FOREIGN KEY ("Материал") REFERENCES "Материал" ("primaryKey");
+
+CREATE INDEX "СоставУслуги__8739" on "СоставУслуги" ("Материал");
+
+ALTER TABLE "СоставУслуги"
+	ADD CONSTRAINT "СоставУслуги__8874" FOREIGN KEY ("Услуга") REFERENCES "Услуга" ("primaryKey");
+
+CREATE INDEX "СоставУслуги__3037" on "СоставУслуги" ("Услуга");
+
 ALTER TABLE "Сотрудник"
 	ADD CONSTRAINT "Сотрудник_FДо_9849" FOREIGN KEY ("Должность") REFERENCES "Должность" ("primaryKey");
 
@@ -381,6 +436,11 @@ ALTER TABLE "Документы"
 	ADD CONSTRAINT "Документы_FКл_8790" FOREIGN KEY ("Клиент") REFERENCES "Клиент" ("primaryKey");
 
 CREATE INDEX "Документы_IКл_5262" on "Документы" ("Клиент");
+
+ALTER TABLE "Материал"
+	ADD CONSTRAINT "Материал_FПро_8274" FOREIGN KEY ("Производитель") REFERENCES "Производитель" ("primaryKey");
+
+CREATE INDEX "Материал_IПрои_233" on "Материал" ("Производитель");
 
 ALTER TABLE "STORMWEBSEARCH"
 	ADD CONSTRAINT "STORMWEBSEARCH_FSTORMFILT_6521" FOREIGN KEY ("FilterSetting_m0") REFERENCES "STORMFILTERSETTING" ("primaryKey");

@@ -45,6 +45,8 @@ namespace IIS.Testova
         
         private double fЦена;
         
+        private IIS.Testova.DetailArrayOfСоставУслуги fСоставУслуги;
+        
         // *** Start programmer edit section *** (Услуга CustomMembers)
 
         // *** End programmer edit section *** (Услуга CustomMembers)
@@ -141,6 +143,41 @@ namespace IIS.Testova
                 // *** Start programmer edit section *** (Услуга.Цена Set end)
 
                 // *** End programmer edit section *** (Услуга.Цена Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Услуга.
+        /// </summary>
+        // *** Start programmer edit section *** (Услуга.СоставУслуги CustomAttributes)
+
+        // *** End programmer edit section *** (Услуга.СоставУслуги CustomAttributes)
+        public virtual IIS.Testova.DetailArrayOfСоставУслуги СоставУслуги
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Услуга.СоставУслуги Get start)
+
+                // *** End programmer edit section *** (Услуга.СоставУслуги Get start)
+                if ((this.fСоставУслуги == null))
+                {
+                    this.fСоставУслуги = new IIS.Testova.DetailArrayOfСоставУслуги(this);
+                }
+                IIS.Testova.DetailArrayOfСоставУслуги result = this.fСоставУслуги;
+                // *** Start programmer edit section *** (Услуга.СоставУслуги Get end)
+
+                // *** End programmer edit section *** (Услуга.СоставУслуги Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Услуга.СоставУслуги Set start)
+
+                // *** End programmer edit section *** (Услуга.СоставУслуги Set start)
+                this.fСоставУслуги = value;
+                // *** Start programmer edit section *** (Услуга.СоставУслуги Set end)
+
+                // *** End programmer edit section *** (Услуга.СоставУслуги Set end)
             }
         }
         

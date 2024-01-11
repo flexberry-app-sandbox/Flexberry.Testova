@@ -3,6 +3,15 @@
 
 
 
+CREATE TABLE СоставУслуги (
+ primaryKey UUID NOT NULL,
+ Количество INT NULL,
+ Единицы VARCHAR(255) NULL,
+ Материал UUID NOT NULL,
+ Услуга UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
 CREATE TABLE Клиент (
  primaryKey UUID NOT NULL,
  КодКлиента INT NULL,
@@ -62,6 +71,21 @@ CREATE TABLE Документы (
  НомерПаспорта INT NULL,
  Полис INT NULL,
  Клиент UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Материал (
+ primaryKey UUID NOT NULL,
+ КодМатериала INT NULL,
+ Наименование VARCHAR(255) NULL,
+ Производитель UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Производитель (
+ primaryKey UUID NOT NULL,
+ Код INT NULL,
+ Наименование VARCHAR(255) NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -182,6 +206,12 @@ CREATE TABLE ApplicationLog (
 
 
 
+ ALTER TABLE СоставУслуги ADD CONSTRAINT FK5f462252aca390432906c2e980a10d0039825da5 FOREIGN KEY (Материал) REFERENCES Материал; 
+CREATE INDEX Index5f462252aca390432906c2e980a10d0039825da5 on СоставУслуги (Материал); 
+
+ ALTER TABLE СоставУслуги ADD CONSTRAINT FK2a99a3673f1870cd631bc19658d8cc2fb8e257f7 FOREIGN KEY (Услуга) REFERENCES Услуга; 
+CREATE INDEX Index2a99a3673f1870cd631bc19658d8cc2fb8e257f7 on СоставУслуги (Услуга); 
+
  ALTER TABLE Сотрудник ADD CONSTRAINT FK52e78a286299ec0faa67b4f751a6cda2dec1a57a FOREIGN KEY (Должность) REFERENCES Должность; 
 CREATE INDEX Index52e78a286299ec0faa67b4f751a6cda2dec1a57a on Сотрудник (Должность); 
 
@@ -205,6 +235,9 @@ CREATE INDEX Index1dc3b24c817a0a523cd77286bc23d0b7625c5ac7 on Запись (Кл
 
  ALTER TABLE Документы ADD CONSTRAINT FK111e3b9442d47c44d653f07cd86b5ca4ee8cace2 FOREIGN KEY (Клиент) REFERENCES Клиент; 
 CREATE INDEX Index111e3b9442d47c44d653f07cd86b5ca4ee8cace2 on Документы (Клиент); 
+
+ ALTER TABLE Материал ADD CONSTRAINT FK4b88f1257b08ae87ab00f46e707a9552218d92a0 FOREIGN KEY (Производитель) REFERENCES Производитель; 
+CREATE INDEX Index4b88f1257b08ae87ab00f46e707a9552218d92a0 on Материал (Производитель); 
 
  ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
 

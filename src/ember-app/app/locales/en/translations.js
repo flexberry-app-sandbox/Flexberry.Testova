@@ -18,7 +18,10 @@ import IISTestovaДолжностьModel from './models/i-i-s-testova-должн
 import IISTestovaЗаписьModel from './models/i-i-s-testova-запись';
 import IISTestovaКабинетModel from './models/i-i-s-testova-кабинет';
 import IISTestovaКлиентModel from './models/i-i-s-testova-клиент';
+import IISTestovaМатериалModel from './models/i-i-s-testova-материал';
 import IISTestovaОказаниеУслугModel from './models/i-i-s-testova-оказание-услуг';
+import IISTestovaПроизводительModel from './models/i-i-s-testova-производитель';
+import IISTestovaСоставУслугиModel from './models/i-i-s-testova-состав-услуги';
 import IISTestovaСотрудникModel from './models/i-i-s-testova-сотрудник';
 import IISTestovaУслугаModel from './models/i-i-s-testova-услуга';
 
@@ -32,7 +35,10 @@ $.extend(true, translations, {
     'i-i-s-testova-запись': IISTestovaЗаписьModel,
     'i-i-s-testova-кабинет': IISTestovaКабинетModel,
     'i-i-s-testova-клиент': IISTestovaКлиентModel,
+    'i-i-s-testova-материал': IISTestovaМатериалModel,
     'i-i-s-testova-оказание-услуг': IISTestovaОказаниеУслугModel,
+    'i-i-s-testova-производитель': IISTestovaПроизводительModel,
+    'i-i-s-testova-состав-услуги': IISTestovaСоставУслугиModel,
     'i-i-s-testova-сотрудник': IISTestovaСотрудникModel,
     'i-i-s-testova-услуга': IISTestovaУслугаModel
   },

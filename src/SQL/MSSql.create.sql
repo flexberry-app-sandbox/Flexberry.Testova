@@ -2,6 +2,21 @@
 
 
 
+CREATE TABLE [СоставУслуги] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Единицы] VARCHAR(255)  NULL,
+
+	 [Количество] INT  NULL,
+
+	 [Материал] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Услуга] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
 CREATE TABLE [Клиент] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
@@ -104,6 +119,30 @@ CREATE TABLE [Документы] (
 	 [СерияПаспорта] INT  NULL,
 
 	 [Клиент] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
+CREATE TABLE [Материал] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [КодМатериала] INT  NULL,
+
+	 [Наименование] VARCHAR(255)  NULL,
+
+	 [Производитель] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
+CREATE TABLE [Производитель] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Код] INT  NULL,
+
+	 [Наименование] VARCHAR(255)  NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
